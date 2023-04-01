@@ -22,7 +22,9 @@ router.route('/').post(async (req, res) => {
   try {
     console.log('Request body: ');
     const { prompt } = req.body;
+    console.log(prompt);
 
+    console.log('Calling DALL-E...');
     const aiResponse = await openai.createImage({
       prompt: prompt,
       n: 1,
