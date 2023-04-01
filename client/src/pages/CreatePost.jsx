@@ -27,6 +27,7 @@ const CreatePost = () => {
   const generateImage = async () => {
     if (form.prompt) {
       try {
+        
         setGeneratingImg(true);
         const response = await fetch('https://dall-e-2-0-mv38.onrender.com/api/v1/dalle', {
           method: 'POST',

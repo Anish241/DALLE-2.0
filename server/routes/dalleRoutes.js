@@ -29,9 +29,11 @@ router.route('/').post(async (req, res) => {
       size: '1024x1024',
       response_format: 'b64_json',
     });
-
+    console.log('Response: ');
     const image = aiResponse.data.data[0].b64_json;
+    console.log("image");
     res.status(200).json({ photo: image });
+    console.log('Bye from DALL-E!');
   } catch (error) {
     console.error('Errort: ');
     console.error(error);
